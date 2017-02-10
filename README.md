@@ -1,24 +1,28 @@
 # Gamelinker - v1.0
 
-Vielen Dank für deinen Download des ersten funktionierenden Scripts, welches automatisch tote Spieler bei TTT in Teamspeak mutet!
+*This script will allow you to automatically mute players on your TTT-Server in Teamspeak³ thus prevent ghosting.*
 
-Es können noch einige Bugs drin sein, also bitte nicht haten, sondern konstruktiv kritisieren.
+The current version is fully functional, but has some major flaws (Server side script + client side script) which now can hopefully be resolved because the "gmod_luasocket" (https://github.com/danielga/gmod_luasocket) library allows GMod to directly connect to your TS Server Query.
 
---------------------------------------------------
-Installation:
---------------------------------------------------
+# Installation (v 1.0):
 
-* Kopiert "gmod_script.lua" in "...Hier_euren_Pfad_einfügen...\Steam\steamapps\common\steamcmd\gmod\garrysmod\lua\autorun\server"
-* Kopiert den "TS-Script" Ordner irgendwo hin
-* Erstellt auf eurem TS einen Channel, der Talkpower benötigt (Name ist egal), sowie Join-Power.
-* Findet die Channel ID dieses Channels (geht mit dem Befehl: channellist)
-* Alle Spieler, die auf dem TTT-Server sind, müssen auf Teamspeak EXAKT (inkl. Groß- und Kleinschreibung etc.) heißen wie in Garrys Mod
-* Sobald ein Spieler auf den Server geht und spawnt, wird er automatisch in den oben genannten Channel verschoben. So wird sichergestellt, dass nur Spieler, die auch auf dem TTT-Server sind, im entsprechenden Channel sind.
-* Bearbeitet "config.txt"
-* Ändert die Variablen zu euren Werten.
-* Ihr könnt "gmod-script.lua" bzw. "ts-script.exe" umbenennen, falls ihr wollt.
-* Startet euren TTT-Server
-* Startet "ts_script.exe" aus dem TS-Script Ordner
+* copy "gmod_script.lua" to "...Insert_your_path_here...\Steam\steamapps\common\steamcmd\gmod\garrysmod\lua\autorun\server"
+* copy the rest of the "TS-Script" folder somewhere
+* create a channel on your TS-Server which requires join and talk power
+* get the ID of the channel (use the "channellist" command)
+* all users on your TS have to use the # exact# same name in TTT for the script to work properly (may be changed in the future)
+* the moment a players spawns on the TTT-Server he will automatically be moved to the channel you created, preventing players that aren't on your TTT-Server from joining
+* now edit the "config.txt"
+* adjust the variables to your values
+* start your TTT-Server
+* last, but not least start "ts_script.exe" (located in the "TS-Script" folder)
+
+# Troubleshooting
+
+* If is shows an error like "socket.core" not found, install this: http://luaforge.net/projects/luaforwindows/
+* If the script starts, but doesn't connect to your TS-Query, check if the values config.txt are the correct ones
+* If the script works fine, but certain players aren't recognized, make sure they have the # exact# same name in TTT and TS
+
 
 Glückwunsch, nun sollte alles laufen!
 
