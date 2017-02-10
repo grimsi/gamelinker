@@ -6,7 +6,7 @@ The current version is fully functional, but has some major flaws (Server side s
 
 # Installation (v 1.0):
 
-* copy "gmod_script.lua" to "...Insert_your_path_here...\garrysmod\lua\autorun\server"
+* copy "gmod_script.lua" to "...Insert_your_path_here...\garrysmod\lua\autorun\server" (on the server, **not** your PC!)
 * copy the rest of the "TS-Script" folder somewhere
 * create a channel on your TS-Server which requires join and talk power
 * get the ID of the channel (use the "channellist" command)
