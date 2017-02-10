@@ -1,6 +1,6 @@
 # Gamelinker - v1.0
 
-*This script will allow you to automatically mute players on your TTT-Server in Teamspeak³ thus prevent ghosting.*
+*This script will allow you to automatically mute players on your [TTT](http://ttt.badking.net/)-Server in Teamspeak³ thus prevent ghosting.*
 
 The current version is fully functional, but has some major flaws (Server side script + client side script) which now can hopefully be resolved because the "[gmod_luasocket](https://github.com/danielga/gmod_luasocket)" library allows GMod to directly connect to your TS Server Query.
 
