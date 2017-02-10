@@ -1,4 +1,4 @@
-# gamelinker
+# Gamelinker - v1.0
 
 Vielen Dank für deinen Download des ersten funktionierenden Scripts, welches automatisch tote Spieler bei TTT in Teamspeak mutet!
 
