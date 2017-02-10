@@ -1,8 +1,8 @@
-IP-Adress:192.168.178.37;		-- Achtet darauf, hinter dem ":" kein Leerzeichen zu haben und jede Variable mit ";" abzuschließen! Außerdem sollte ihr die Reihenfolge unbedingt beibehalten (nicht Port vor IP zB)
-Port:10011;				-- Die IP eures TS-Servers, Standardport ist 10011
-Servername:1;				-- Der Name/Nummer eures V-Servers (Standard ist "1")
-Username:serveradmin;			-- Logindaten fÃ¼r euren Teamspeak ServerQuery, Standardname ist "serveradmin"
-Password:GEHEIM;			-- Keine Garantie, dass Passwörter mit Sonderzeichen (% , \ , * usw.)	funktionieren werden!
-tickrate:4;				-- Wie oft pro Sekunde er checkt, ob jemand gestorben ist. Höhere Werte erlauben höhere Genauigkeit, brauchen aber mehr Performance. 4 ist ein guter Kompromiss
-Path to data Folder:D:\\Programme\\Steam\\steamapps\\common\\steamcmd\\gmod\\garrysmod\\data;		-- Der Data Ordner befindet sich innerhalb des GMod Server Ordners. Vergesst nicht, alle "\" zu "\\" zu machen!
-Channel ID:43;				-- Die ID des Channels, der für TTT genutzt wird
+IP-Adress:192.168.178.37;		-- Keep in mind that there are no blank spaces (" ") between the ":" and the ";"
+Port:10011;				-- The IP of your TS Server, Port is usually 10011
+Servername:1;				-- The number of your V-Server (usually "1")
+Username:serveradmin;			-- Username for the TS-Query
+Password:GEHEIM;			-- Password for TS-Query (Passwords with "%,&,$,Â§..." may not work!
+tickrate:4;				-- how often the client checks for gameupdates (higher value = better performance, lower value = less resources needed)
+Path to data Folder:D:\\Programme\\Steam\\steamapps\\common\\steamcmd\\gmod\\garrysmod\\data;		-- the "data" folder is inside your gmod server folder, DONT FORGET TO REPLACE ALL "\" with "\\"!
+Channel ID:43;				-- The ID of the channel you created for this script
