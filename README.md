@@ -21,6 +21,7 @@ The current version is fully functional, but has some major flaws (Server side s
 * If it shows an error like "socket.core" not found, install this: [Lua for Windows](http://luaforge.net/projects/luaforwindows/)
 * If the script starts, but doesn't connect to your TS-Query, check if the values in your config.txt are the correct ones
 * If the script works fine, but certain players aren't recognized, make sure they have the **exact** same name in TTT and TS
+* If only some users get switched and/or muted, check if the Account you used to log into the TS Query has sufficient permissions to move/mute people that are Mods/Admins/etc.
 
 Congrats, youre done :)
 
