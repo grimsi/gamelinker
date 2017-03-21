@@ -22,9 +22,10 @@ The current version is fully functional, but has some major flaws (Server side s
 * If the script starts, but doesn't connect to your TS-Query, check if the values in your config.txt are the correct ones
 * If the script works fine, but certain players aren't recognized, make sure they have the **exact** same name in TTT and TS
 * If only some users get switched and/or muted, check if the Account you used to log into the TS Query has sufficient permissions to move/mute people that are Mods/Admins/etc.
+* If you get the error "attempt to index local 'file' a 'nil' value", make sure the server-side script is installed correctly and you started the server (check if "alive.txt" and "dead.txt" have been created in the "data" Folder)
 
 Congrats, youre done :)
 
-Please report bugs, suggestions etc. here in GutHub (under "[issues](https://github.com/grimsi/gamelinker/issues)".
+Please report bugs, suggestions etc. here in GutHub (under "[issues](https://github.com/grimsi/gamelinker/issues))".
 
 At the moment im pretty busy, so please be patient :)
