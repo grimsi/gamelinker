@@ -1,0 +1,8 @@
+{
+  "ip": "127.0.0.1",
+  "port": "10011",
+  "server": "1",
+  "username": "serveradmin",
+  "password": "PASSWORD",
+  "channel-id": "3"
+}

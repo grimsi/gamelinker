@@ -1,0 +1,4 @@
+1. Move "gmsv_bromsock_win32.dll" to the folder "garrysmod\lua\bin" (you may have to create this folder)
+2. Move "ts-automute.lua" and the "ts-automute" folder to the folder "garrysmod\lua\autorun\server"
+3. Edit the "config.txt" in the "ts-automute" folder
+4. Start the server

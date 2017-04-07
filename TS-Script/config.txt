@@ -1,8 +1,0 @@
-IP-Adress:192.168.178.37;		-- Keep in mind that there are no blank spaces (" ") between the ":" and the ";"
-Port:10011;				-- The IP of your TS Server, Port is usually 10011
-Servername:1;				-- The number of your V-Server (usually "1")
-Username:serveradmin;			-- Username for the TS-Query
-Password:GEHEIM;			-- Password for TS-Query (Passwords with "%,&,$,§..." may not work!
-tickrate:4;				-- how often the client checks for gameupdates (higher value = better performance, lower value = less resources needed)
-Path to data Folder:D:\\Programme\\Steam\\steamapps\\common\\steamcmd\\gmod\\garrysmod\\data;		-- the "data" folder is inside your gmod server folder, DONT FORGET TO REPLACE ALL "\" with "\\"!
-Channel ID:43;				-- The ID of the channel you created for this script

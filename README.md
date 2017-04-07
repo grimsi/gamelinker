@@ -1,30 +1,30 @@
-# Gamelinker - v1.0
+# TS-Automute - beta4
 
-*This script will allow you to automatically mute players on your [TTT](http://ttt.badking.net/)-Server in Teamspeak³ thus prevent ghosting.*
+* This script will allow you to automatically mute players on your [TTT](http://ttt.badking.net/)-Server in Teamspeak³ thus prevent ghosting.*
 
-The current version is fully functional, but has some major flaws (Server side script + client side script) which now can hopefully be resolved because the "[gmod_luasocket](https://github.com/danielga/gmod_luasocket)" library allows GMod to directly connect to your TS Server Query.
+This particular version is still in beta Stage!
+A fully functional version can be found in the "master" branch (although this version uses a clientside script).
 
-# Installation (v 1.0):
+# Installation:
 
-* copy "gmod_script.lua" to "...Insert_your_path_here...\garrysmod\lua\autorun\server" (on the server, **not** your PC!)
-* copy the rest of the "TS-Script" folder somewhere
-* create a channel on your TS-Server which requires join and talk power
-* get the ID of the channel (use the "channellist" command)
-* all users on your TS have to use the **exact** same name in TTT for the script to work properly (may be changed in the future)
-* the moment a players spawns on the TTT-Server he will automatically be moved to the channel you created, preventing players that aren't on your TTT-Server from joining
-* now edit the "config.txt" and adjust the variables to your values
-* start your TTT-Server
-* last, but not least start "ts_script.exe" (located in the "TS-Script" folder)
+* Move "gmsv_bromsock_win32.dll" to the folder "garrysmod\lua\bin" (you may have to create this folder)
+* Move "ts-automute.lua" and the "ts-automute" folder to the folder "garrysmod\lua\autorun\server"
+* Edit the "config.txt" in the "ts-automute" folder
+* Start the server
+
+If you experience any errors, please look at your server log and create an issue on GitHub
+
+# Known Bugs
+
+* Nicknames with special characters will cause errors (Teamspeak does not support all special characters steam supports)
 
 # Troubleshooting
 
-* If it shows an error like "socket.core" not found, install this: [Lua for Windows](http://luaforge.net/projects/luaforwindows/)
-* If the script starts, but doesn't connect to your TS-Query, check if the values in your config.txt are the correct ones
-* If the script works fine, but certain players aren't recognized, make sure they have the **exact** same name in TTT and TS
-* If only some users get switched and/or muted, check if the Account you used to log into the TS Query has sufficient permissions to move/mute people that are Mods/Admins/etc.
-* If you get the error "attempt to index local 'file' a 'nil' value", make sure the server-side script is installed correctly and you started the server (check if "alive.txt" and "dead.txt" have been created in the "data" Folder)
+* If your server uses Linux instead of Windows (very likely if your server is rented), download the correct *.dll from [here](https://github.com/Bromvlieg/gm_bromsock/tree/master/Builds) (please use a "nossl" version)
+* "\[TS-Automute\] Player with nick "NICKNAME" uses illegal Characters in his name!" -> Not all special Characters are supported (some may will be in future versions)
+* "Couldn't include file 'includes/modules/bromsock.lua' (File not found) (@lua/autorun/server/ts-automute.lua (line 1))" -> Make sure the *.dll is in the correct folder
 
-Congrats, youre done :)
+Congrats, you're done :)
 
 Please report bugs, suggestions etc. here in GutHub (under "[issues](https://github.com/grimsi/gamelinker/issues))".
 
