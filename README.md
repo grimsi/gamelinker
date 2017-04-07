@@ -3,7 +3,6 @@
 * This script will allow you to automatically mute players on your [TTT](http://ttt.badking.net/)-Server in Teamspeak³ thus prevent ghosting.*
 
 This particular version is still in beta Stage!
-A fully functional version can be found in the "master" branch (although this version uses a clientside script).
 
 # Installation:
 
