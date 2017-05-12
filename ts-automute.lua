@@ -119,8 +119,8 @@ function convertSpecialChars(name)
     -- note: if you find a character thats missing, please report it to me and dont forget to escape the "\" if you want to add it on your own
     local specialchars  = {"\\s", "\\p"}
     local subchars      = {" "  , "|"  }
-    for k, v in pairs(specialchars) do
-        string.gsub(name, specialchars[v], subchars[v])
+    for i=1, table.getn(specialchars) do
+        name = string.gsub(name, specialchars[i], subchars[i])
     end
     MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Name after conversion: "..name.."\n")
     return name
