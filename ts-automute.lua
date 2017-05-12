@@ -49,7 +49,7 @@ socket:SetCallbackReceive(function(sock, receivedPacket)
                 MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] [RoundHasEnded] Player "..nick.." is talker.\n")
             end
         -- the player is still alive
-        elseif PlayerIsAlive(nick) then
+        elseif playerIsAlive(nick) then
             packet:WriteStringRaw("clientedit clid="..clid.." client_is_talker=1\n")
             socket:Send(packet, true)
             if isDebug then
