@@ -113,7 +113,9 @@ end
 -- @param name
 -- @return name with converted special characters
 function convertSpecialChars(name)
-    MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Name before conversion: "..name.."\n")
+    if isDebug then
+        MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Name before conversion: "..name.."\n")
+    end
     -- "specialchars" contains all Special Characters in the form they are sent back by TS Query and "subchars" their substitutes needed to send to the TS Query
     -- (its very strange that TS Query needs a different input than it gives output...)
     -- note: if you find a character thats missing, please report it to me and dont forget to escape the "\" if you want to add it on your own
@@ -122,7 +124,9 @@ function convertSpecialChars(name)
     for i=1, table.getn(specialchars) do
         name = string.gsub(name, specialchars[i], subchars[i])
     end
-    MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Name after conversion: "..name.."\n")
+    if isDebug then
+        MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Name after conversion: "..name.."\n")
+    end
     return name
 end
 
