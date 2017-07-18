@@ -142,7 +142,6 @@ gameevent.Listen( "PlayerConnect" )
 
 -- round is in preparing phase - all new players can get talkpower when joining
 hook.Add("TTTPrepareRound", "", function()
-    
     if isDebug then
         MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Round prepartation.\n")
     end
@@ -153,15 +152,19 @@ end)
 
 -- round is starting - new players dont get talkpower anymore and if player dies talkpower gets removed
 hook.Add("TTTBeginRound", "", function()
-    
     if isDebug then
         MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Round start.\n")
     end
 
     roundIsPreparing = false
 
-    hook.Add( "PlayerDeath", "", function(target)
-        
+    -- unmute everybody again
+    for k, v in pairs( player.GetAll() ) do
+        packet:WriteStringRaw("clientfind pattern="..v:GetName().."\n")
+        socket:Send(packet, true)
+    end
+
+    hook.Add( "PlayerDeath", "PlayerDeath", function(target)
         if isDebug then
             MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Entity got killed.\n")
         end
@@ -173,12 +176,11 @@ end)
 
 -- give all players talkpower at the end of the round
 hook.Add("TTTEndRound", "", function()
-    
     if isDebug then
         MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Round end.\n")
     end
 
-    hook.Remove( "PlayerDeath", "PlayerDeath_example")
+    hook.Remove( "PlayerDeath", "PlayerDeath")
     
     roundHasEnded = true
     
