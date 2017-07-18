@@ -139,6 +139,7 @@ gameevent.Listen( "TTTEndRound" )
 gameevent.Listen( "TTTPrepareRound" )
 gameevent.Listen( "PlayerDisconnected" )
 gameevent.Listen( "PlayerConnect" )
+gameevent.Listen( "PlayerSpawn" )
 
 -- round is in preparing phase - all new players can get talkpower when joining
 hook.Add("TTTPrepareRound", "", function()
@@ -172,6 +173,15 @@ hook.Add("TTTBeginRound", "", function()
         packet:WriteStringRaw("clientfind pattern="..target:GetName().."\n")
         socket:Send(packet, true)
     end)
+        
+    hook.Add( "PlayerSpawn", "PlayerSpawn", function(target)
+        if isDebug then
+            MsgC( Color( 255, 0, 0 ), "[TS-Automute] [Debug] Entity spawned/respawned.\n")
+        end
+        
+        packet:WriteStringRaw("clientfind pattern="..target:GetName().."\n")
+        socket:Send(packet, true)
+    end)
 end)
 
 -- give all players talkpower at the end of the round
@@ -181,6 +191,7 @@ hook.Add("TTTEndRound", "", function()
     end
 
     hook.Remove( "PlayerDeath", "PlayerDeath")
+    hook.Remove( "PlayerSpawn", "PlayerSpawn")
     
     roundHasEnded = true
     
